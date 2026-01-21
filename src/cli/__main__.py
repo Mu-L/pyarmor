@@ -791,11 +791,19 @@ def main_entry(argv):
         parser.print_help()
 
 
+def map_error(e):
+    if str(e) == 'invalid license token':
+        return ('invalid license token or failed to update license token. '
+                'please make sure this device is online '
+                'and can connect to Pyarmor License Server')
+    return e
+
+
 def main():
     try:
         main_entry(sys.argv[1:])
     except Exception as e:
-        logger.error(e)
+        logger.error(map_error(e))
         log_bug(e)
         sys.exit(1 if isinstance(e, CliError) else 2)
 
