@@ -446,7 +446,7 @@ If run `pyarmor-auth` in Linux VM or WSL, please check group license could work 
 Using multiple Pyarmor Licenses in same device
 ==============================================
 
-Generally the registration information is sotred in the Pyarmor :term:`Home Path`, the default value is :file:`~/.pyarmor`. It means
+Generally the registration information is stored in the Pyarmor :term:`Home Path`, the default value is :file:`~/.pyarmor`. It means
 
 - All Python virtual environments share same registration information
 - It may not work to register other Pyarmor license in same device
